@@ -7,13 +7,13 @@
         <ui:Button text="Credits" name="creditsButton" class="button" />
         <ui:Button text="Quit" name="quitButton" class="button" />
     </Menu>
-    <Menu name="play" first-focus="test" class="root hidden">
+    <Menu name="play" first-focus="back" class="root hidden">
         <ui:Label text="Play" class="title" />
-        <ui:Button text="Play" name="test" class="button" />
+        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
     </Menu>
-    <Menu name="options" first-focus="test" class="root hidden">
+    <Menu name="options" first-focus="back" class="root hidden">
         <ui:Label text="Options" class="title" />
-        <ui:Button text="Play" name="test" class="button" />
+        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
     </Menu>
     <Menu name="credits" first-focus="back" class="root hidden">
         <ui:Label text="Credits" class="title" />
