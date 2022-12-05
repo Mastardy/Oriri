@@ -1,0 +1,43 @@
+#root {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+#title {
+    -unity-text-align: upper-center;
+    font-size: 1200%;
+    -unity-font-style: bold;
+    color: rgb(230, 230, 230);
+    margin-bottom: 5%;
+}
+
+.button {
+    font-size: 350%;
+    -unity-text-align: middle-center;
+    margin-bottom: 1%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: rgba(255, 255, 255, 0.5);
+    transition-duration: 0.1s;
+}
+
+.button:hover {
+    background-color: rgba(191, 191, 191, 0.5);
+    transition-duration: 0.1s;
+    transition-property: all;
+    transition-timing-function: ease-in;
+}
+
+.button:focus {
+    background-color: rgba(191, 191, 191, 0.5);
+    transition-duration: 0.1s;
+    transition-property: all;
+    transition-timing-function: ease-in;
+}
+
+.button:active {
+    background-color: rgba(64, 64, 64, 0.5);
+}
