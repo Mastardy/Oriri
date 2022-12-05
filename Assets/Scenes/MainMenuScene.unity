@@ -303,6 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 737436ec3f6a43a42ba2c0b0420a7033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventSystemGO: {fileID: 952368046}
 --- !u!1 &952368046
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,6 +315,7 @@ GameObject:
   - component: {fileID: 952368050}
   - component: {fileID: 952368048}
   - component: {fileID: 952368047}
+  - component: {fileID: 952368051}
   m_Layer: 0
   m_Name: Main Menu Action
   m_TagString: Untagged
@@ -374,7 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 527182897}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &952368050
@@ -392,3 +394,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &952368051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952368046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65dff2a91b2b9ba48a80b953a4facf74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelSettings: {fileID: 11400000, guid: 43ea328f632a50d4a87dcdf3349c6725, type: 2}

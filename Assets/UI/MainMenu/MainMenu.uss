@@ -1,15 +1,20 @@
-#root {
+.root {
     flex-grow: 1;
     align-items: center;
     justify-content: center;
+    background-color: rgb(38, 38, 38);
 }
 
-#title {
+.title {
     -unity-text-align: upper-center;
     font-size: 1200%;
     -unity-font-style: bold;
     color: rgb(230, 230, 230);
     margin-bottom: 5%;
+}
+
+.hidden {
+    display: none;
 }
 
 .button {
@@ -40,4 +45,11 @@
 
 .button:active {
     background-color: rgba(64, 64, 64, 0.5);
+}
+
+.creditsLabel {
+    font-size: 350%;
+    -unity-text-align: middle-center;
+    margin-bottom: 1%;
+    color: rgb(230, 230, 230);
 }

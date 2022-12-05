@@ -1,10 +1,25 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=0e60d80067457e1419877ecf6887e04c&amp;type=3#MainMenu" />
-    <ui:VisualElement name="root" style="background-color: rgb(38, 38, 38);">
-        <ui:Label name="title" text="Oriri" />
-        <ui:Button text="Play" display-tooltip-when-elided="true" name="play" class="button" />
-        <ui:Button text="Options" display-tooltip-when-elided="true" name="options" class="button" />
-        <ui:Button text="Credits" display-tooltip-when-elided="true" name="credits" class="button" />
-        <ui:Button text="Quit" display-tooltip-when-elided="true" name="quit" class="button" />
-    </ui:VisualElement>
+    <Menu name="main" first-focus="playButton" class="root">
+        <ui:Label text="Oriri" enable-rich-text="false" class="title" />
+        <ui:Button text="Play" name="playButton" class="button" />
+        <ui:Button text="Options" name="optionsButton" class="button" />
+        <ui:Button text="Credits" name="creditsButton" class="button" />
+        <ui:Button text="Quit" name="quitButton" class="button" />
+    </Menu>
+    <Menu name="play" first-focus="test" class="root hidden">
+        <ui:Label text="Play" class="title" />
+        <ui:Button text="Play" name="test" class="button" />
+    </Menu>
+    <Menu name="options" first-focus="test" class="root hidden">
+        <ui:Label text="Options" class="title" />
+        <ui:Button text="Play" name="test" class="button" />
+    </Menu>
+    <Menu name="credits" first-focus="back" class="root hidden">
+        <ui:Label text="Credits" class="title" />
+        <ui:Label text="André Monteiro - Programmer" class="creditsLabel"/>
+        <ui:Label text="Diogo Barbosa - 3D Modeler" class="creditsLabel"/>
+        <ui:Label text="Gonçalo Oliveira - Programmer" class="creditsLabel"/>
+        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
+    </Menu>
 </ui:UXML>
