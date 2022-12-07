@@ -7,14 +7,35 @@
         <ui:Button text="Credits" name="creditsButton" class="button" />
         <ui:Button text="Quit" name="quitButton" class="button" />
     </Menu>
+    
     <Menu name="play" first-focus="back" class="root hidden">
         <ui:Label text="Play" class="title" />
         <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
     </Menu>
-    <Menu name="options" first-focus="back" class="root hidden">
+    
+    <Menu name="options" first-focus="generalButton" class="root hidden">
         <ui:Label text="Options" class="title" />
+        <ui:Button text="General" name="generalButton" class="button" />
+        <ui:Button text="Graphics" name="graphicsButton" class="button" />
+        <ui:Button text="Controls" name="controlsButton" class="button" />
         <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
     </Menu>
+    <Menu name="generalOptions" first-focus="back" class="root hidden">
+        <ui:Label text="General" class="title" />
+
+        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
+    </Menu>
+    <Menu name="graphicsOptions" first-focus="back" class="root hidden">
+        <ui:Label text="Graphics" class="title" />
+
+        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
+    </Menu>
+    <Menu name="controlsOptions" first-focus="back" class="root hidden">
+        <ui:Label text="Controls" class="title" />
+
+        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
+    </Menu>
+    
     <Menu name="credits" first-focus="back" class="root hidden">
         <ui:Label text="Credits" class="title" />
         <ui:Label text="André Monteiro - Programmer" class="creditsLabel"/>

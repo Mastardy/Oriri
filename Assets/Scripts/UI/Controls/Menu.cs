@@ -8,10 +8,7 @@ public class Menu : VisualElement
     {
         private UxmlStringAttributeDescription propertyPath;
         
-        public UxmlTraits()
-        {
-            propertyPath = new UxmlStringAttributeDescription { name = "first-focus" };
-        }
+        public UxmlTraits() => propertyPath = new UxmlStringAttributeDescription { name = "first-focus" };
 
         public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
         { 
