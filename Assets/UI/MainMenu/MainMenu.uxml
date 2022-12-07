@@ -1,5 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=0e60d80067457e1419877ecf6887e04c&amp;type=3#MainMenu" />
+    
+    
+    
     <Menu name="main" first-focus="playButton" class="root">
         <ui:Label text="Oriri" enable-rich-text="false" class="title" />
         <ui:Button text="Play" name="playButton" class="button" />
@@ -8,33 +11,48 @@
         <ui:Button text="Quit" name="quitButton" class="button" />
     </Menu>
     
+    
+    
     <Menu name="play" first-focus="back" class="root hidden">
         <ui:Label text="Play" class="title" />
         <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
     </Menu>
     
-    <Menu name="options" first-focus="generalButton" class="root hidden">
+    
+    
+    <Menu name="options" first-focus="controlsButton" class="root hidden">
         <ui:Label text="Options" class="title" />
-        <ui:Button text="General" name="generalButton" class="button" />
-        <ui:Button text="Graphics" name="graphicsButton" class="button" />
         <ui:Button text="Controls" name="controlsButton" class="button" />
+        <ui:Button text="Graphics" name="graphicsButton" class="button" />
+        <ui:Button text="Accessibility" name="accessibilityButton" class="button" />
         <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
     </Menu>
-    <Menu name="generalOptions" first-focus="back" class="root hidden">
-        <ui:Label text="General" class="title" />
 
-        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
-    </Menu>
-    <Menu name="graphicsOptions" first-focus="back" class="root hidden">
-        <ui:Label text="Graphics" class="title" />
 
-        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
-    </Menu>
     <Menu name="controlsOptions" first-focus="back" class="root hidden">
         <ui:Label text="Controls" class="title" />
 
         <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
     </Menu>
+    
+    
+    
+    <Menu name="graphicsOptions" first-focus="back" class="root hidden">
+        <ui:Label text="Graphics" class="title" />
+
+        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
+    </Menu>
+    
+    
+    
+    <Menu name="accessibilityOptions" first-focus="back" class="root hidden">
+        <ui:Label text="Accessibility" class="title" />
+
+        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
+    </Menu>
+    
+    
+    
     
     <Menu name="credits" first-focus="back" class="root hidden">
         <ui:Label text="Credits" class="title" />
