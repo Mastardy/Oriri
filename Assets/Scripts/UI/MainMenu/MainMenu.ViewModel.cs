@@ -74,12 +74,19 @@ public partial class MainMenu : MonoBehaviour
         }
 
         playButton.clicked += PlayMenu;
+        playButton.RegisterCallback<MouseEnterEvent>(FocusOnHover);
         optionsButton.clicked += OptionsMenu;
+        optionsButton.RegisterCallback<MouseEnterEvent>(FocusOnHover);
         controlsButton.clicked += ControlsOptionsMenu;
+        controlsButton.RegisterCallback<MouseEnterEvent>(FocusOnHover);
         graphicsButton.clicked += GraphicsOptionsMenu;
+        graphicsButton.RegisterCallback<MouseEnterEvent>(FocusOnHover);
         accessibilityButton.clicked += AccessibilityOptionsMenu;
+        accessibilityButton.RegisterCallback<MouseEnterEvent>(FocusOnHover);
         creditsButton.clicked += CreditsMenu;
+        creditsButton.RegisterCallback<MouseEnterEvent>(FocusOnHover);
         quitButton.clicked += Quit;
+        quitButton.RegisterCallback<MouseEnterEvent>(FocusOnHover);
         
         ChangeMenu(main);
     }

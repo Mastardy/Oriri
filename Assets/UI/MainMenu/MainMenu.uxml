@@ -1,64 +1,85 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=0e60d80067457e1419877ecf6887e04c&amp;type=3#MainMenu" />
-    
-    
-    
     <Menu name="main" first-focus="playButton" class="root">
-        <ui:Label text="Oriri" enable-rich-text="false" class="title" />
-        <ui:Button text="Play" name="playButton" class="button" />
-        <ui:Button text="Options" name="optionsButton" class="button" />
-        <ui:Button text="Credits" name="creditsButton" class="button" />
-        <ui:Button text="Quit" name="quitButton" class="button" />
+        <ui:Label text="ORIRI" enable-rich-text="false" class="title" />
+        <ui:VisualElement class="yellowMarker" />
+        <ui:VisualElement class="buttonBackground">
+            <ui:Button text="PLAY" name="playButton" class="button" />
+        </ui:VisualElement>
+        <ui:VisualElement class="buttonBackground">
+            <ui:Button text="OPTIONS" name="optionsButton" class="button" />
+        </ui:VisualElement>
+        <ui:VisualElement class="buttonBackground">
+            <ui:Button text="CREDITS" name="creditsButton" class="button" />
+        </ui:VisualElement>
+        <ui:VisualElement class="buttonBackground">
+            <ui:Button text="QUIT" name="quitButton" class="button" />
+        </ui:VisualElement>
     </Menu>
     
     
     
     <Menu name="play" first-focus="back" class="root hidden">
-        <ui:Label text="Play" class="title" />
-        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
+        <ui:Label text="PLAY" class="title" />
+        <ui:VisualElement class="buttonBackground">
+            <ui:Button text="BACK" name="back" class="button" />
+        </ui:VisualElement>
     </Menu>
     
     
     
     <Menu name="options" first-focus="controlsButton" class="root hidden">
-        <ui:Label text="Options" class="title" />
-        <ui:Button text="Controls" name="controlsButton" class="button" />
-        <ui:Button text="Graphics" name="graphicsButton" class="button" />
-        <ui:Button text="Accessibility" name="accessibilityButton" class="button" />
-        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
+        <ui:Label text="OPTIONS" class="title" />
+        <ui:VisualElement class="buttonBackground">
+            <ui:Button text="CONTROLS" name="controlsButton" class="button" />
+        </ui:VisualElement>
+        <ui:VisualElement class="buttonBackground">
+            <ui:Button text="GRAPHICS" name="graphicsButton" class="button" />
+        </ui:VisualElement>
+        <ui:VisualElement class="buttonBackground">
+            <ui:Button text="ACCESSIBILITY" name="accessibilityButton" class="button" />
+        </ui:VisualElement>
+        <ui:VisualElement class="buttonBackground">
+            <ui:Button text="BACK" name="back" class="button" />
+        </ui:VisualElement>
     </Menu>
-
-
+    
+    
+    
     <Menu name="controlsOptions" first-focus="back" class="root hidden">
-        <ui:Label text="Controls" class="title" />
-
-        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
+        <ui:Label text="CONTROLS" class="title" />
+        <ui:VisualElement class="buttonBackground">
+            <ui:Button text="BACK" name="back" class="button" />
+        </ui:VisualElement>
     </Menu>
     
     
     
     <Menu name="graphicsOptions" first-focus="back" class="root hidden">
-        <ui:Label text="Graphics" class="title" />
-
-        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
+        <ui:Label text="GRAPHICS" class="title" />
+        <ui:VisualElement class="buttonBackground">
+            <ui:Button text="BACK" name="back" class="button" />
+        </ui:VisualElement>
     </Menu>
     
     
     
     <Menu name="accessibilityOptions" first-focus="back" class="root hidden">
-        <ui:Label text="Accessibility" class="title" />
-
-        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
+        <ui:Label text="ACCESSIBILITY" class="title" />
+        <ui:VisualElement class="buttonBackground">
+            <ui:Button text="BACK" name="back" class="button" />
+        </ui:VisualElement>
     </Menu>
     
     
     
-    
     <Menu name="credits" first-focus="back" class="root hidden">
-        <ui:Label text="Credits" class="title" />
-        <ui:Label text="André Monteiro - Programmer" class="creditsLabel"/>
-        <ui:Label text="Diogo Barbosa - 3D Modeler" class="creditsLabel"/>
-        <ui:Label text="Gonçalo Oliveira - Programmer" class="creditsLabel"/>
-        <ui:Button text="Back" name="back" style="margin-top: 3%" class="button" />
+        <ui:Label text="CREDITS" class="title" />
+        <ui:Label text="ANDRÉ MONTEIRO - PROGRAMMER" class="creditsLabel" />
+        <ui:Label text="DIOGO BARBOSA - 3D MODELER" class="creditsLabel" />
+        <ui:Label text="GONÇALO OLIVEIRA - PROGRAMMER" class="creditsLabel" />
+        <ui:VisualElement class="buttonBackground">
+            <ui:Button text="BACK" name="back" class="button" />
+        </ui:VisualElement>
     </Menu>
 </ui:UXML>

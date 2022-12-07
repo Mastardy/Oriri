@@ -26,4 +26,6 @@ public partial class MainMenu
         current.RemoveFromClassList("hidden");
         current.Q<VisualElement>(current.firstFocus).Focus();
     }
+
+    private void FocusOnHover(MouseEnterEvent evt) => (evt.target as Button)?.Focus();
 }
