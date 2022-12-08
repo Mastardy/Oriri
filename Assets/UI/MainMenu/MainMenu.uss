@@ -42,10 +42,6 @@
     margin-top: 1%;
 }
 
-.backButton {
-
-}
-
 .button {
     font-size: 300%;
     -unity-font: url("project://database/Assets/UI/Fonts/Inter-Black.ttf?fileID=12800000&guid=9f268d4c8b46708468c7a831e39c8e7e&type=3#Inter-Black");
@@ -71,6 +67,25 @@
 
 .button:active {
     background-color: rgb(60, 60, 80);
+}
+
+.mastardy-picker {
+    flex-direction: row;
+}
+
+.mastardy-picker-label {
+    font-size: 300%;
+    -unity-text-align: middle-center;
+    color: white;
+}
+
+.mastardy-picker-button {
+    font-size: 300%;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 200, 0);
 }
 
 .creditsLabel {
