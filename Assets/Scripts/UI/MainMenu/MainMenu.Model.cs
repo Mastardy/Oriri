@@ -1,8 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public partial class MainMenu
 {
+    private Menu current;
+    
     private void RootMenu(NavigationCancelEvent _) => RootMenu();
     private void RootMenu() => ChangeMenu(main);
     
@@ -27,5 +30,17 @@ public partial class MainMenu
         current.Q<VisualElement>(current.firstFocus).Focus();
     }
 
+    private void FillPickers()
+    {
+        var resolutions = new List<string>();
+        for (int i = 0; i < Screen.resolutions.Length; i++)
+        {
+            var resolution = Screen.resolutions[i];
+            resolutions.Add(resolution.width + " x " + resolution.height);
+        }
+        resolutionPicker.Choices = resolutions;
+        Debug.Log(resolutionPicker.Choices[0]);
+    }
+    
     private void FocusOnHover(MouseEnterEvent evt) => (evt.target as Button)?.Focus();
 }

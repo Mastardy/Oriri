@@ -1,32 +1,8 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public partial class MainMenu : MonoBehaviour
 {
-    private VisualElement root;
-    
-    private Menu current;
-    
-    private Menu main;
-    private Menu play;
-    private Menu options;
-    private Menu controlsOptions;
-    private Menu graphicsOptions;
-    private Menu accessibilityOptions;
-    private Menu credits;
-
-    private Button playButton;
-    private Button optionsButton;
-    private Button controlsButton;
-    private Button graphicsButton;
-    private Button accessibilityButton;
-    private Button creditsButton;
-    private Button quitButton;
-
-    private List<Button> backButtons = new();
-    private List<Button> optionsBackButtons = new();
-    
     private void OnEnable()
     {
         root = GetComponent<UIDocument>().rootVisualElement;
@@ -54,7 +30,9 @@ public partial class MainMenu : MonoBehaviour
         optionsBackButtons.Add(controlsOptions.Q<Button>("back"));
         optionsBackButtons.Add(graphicsOptions.Q<Button>("back"));
         optionsBackButtons.Add(accessibilityOptions.Q<Button>("back"));
-        
+
+        resolutionPicker = graphicsOptions.Q<Picker>("resolutionPicker");
+
         play.RegisterCallback<NavigationCancelEvent>(RootMenu);
         options.RegisterCallback<NavigationCancelEvent>(RootMenu);
         credits.RegisterCallback<NavigationCancelEvent>(RootMenu);
@@ -88,6 +66,7 @@ public partial class MainMenu : MonoBehaviour
         quitButton.clicked += Quit;
         quitButton.RegisterCallback<MouseEnterEvent>(FocusOnHover);
         
+        FillPickers();
         ChangeMenu(main);
     }
 
