@@ -33,13 +33,19 @@ public partial class MainMenu
     private void FillPickers()
     {
         var resolutions = new List<string>();
+        int resolutionIndex = 0;
+        
         for (int i = 0; i < Screen.resolutions.Length; i++)
         {
             var resolution = Screen.resolutions[i];
             resolutions.Add(resolution.width + " x " + resolution.height);
+            if (resolution.Equals(Screen.currentResolution)) resolutionIndex = i;
         }
+        
         resolutionPicker.Choices = resolutions;
-        Debug.Log(resolutionPicker.Choices[0]);
+        resolutionPicker.Index = resolutionIndex;
+        
+        
     }
     
     private void FocusOnHover(MouseEnterEvent evt) => (evt.target as Button)?.Focus();

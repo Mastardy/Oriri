@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine.UIElements;
+using UnityEngine;
 
 public class Picker : VisualElement
 {
@@ -22,6 +23,8 @@ public class Picker : VisualElement
         get => index;
         set
         {
+            if (value < 0) value = choices.Count - 1;
+            if (value > choices.Count - 1) value = 0;
             index = value;
             centerLabel.text = choices[index];
         }
@@ -48,6 +51,7 @@ public class Picker : VisualElement
             text = "<"
         };
         leftButton.AddToClassList(buttonUssClassName);
+        leftButton.RegisterCallback<ClickEvent>(PreviousValue);
         Add(leftButton);
 
         centerLabel = new Label()
@@ -64,6 +68,7 @@ public class Picker : VisualElement
             text = ">"
         };
         rightButton.AddToClassList(buttonUssClassName);
+        rightButton.RegisterCallback<ClickEvent>(NextValue);
         Add(rightButton);
         
         RegisterCallback<NavigationMoveEvent>(OnNavigationMove);
@@ -71,12 +76,12 @@ public class Picker : VisualElement
 
     private void OnNavigationMove(NavigationMoveEvent evt)
     {
-        if (evt.move.x == 0) return;
-
-        var tempIndex = Index;
-        tempIndex += evt.move.x < 0 ? -1 : 1;
-        Index = tempIndex < 0 ? choices.Count - 1 : tempIndex > choices.Count - 1 ? 0 : tempIndex;
+        if (Mathf.Abs(evt.move.x) < 0.1f) return;
+        Index += evt.move.x < 0 ? -1 : 1;
     }
+
+    private void PreviousValue(ClickEvent evt) => Index--;
+    private void NextValue(ClickEvent evt) => Index++;
     
     public new class UxmlFactory : UxmlFactory<Picker, UxmlTraits> { }
 }

@@ -69,23 +69,38 @@
     background-color: rgb(60, 60, 80);
 }
 
+.mastardy-picker-title {
+    font-size: 350%;
+    -unity-text-align: middle-left;
+    color: rgb(255, 255, 255);
+}
+
 .mastardy-picker {
     flex-direction: row;
+    width: 100%;
+}
+
+.mastardy-picker:focus > .mastardy-picker-label {
+    -unity-font-style: bold;
 }
 
 .mastardy-picker-label {
     font-size: 300%;
     -unity-text-align: middle-center;
     color: white;
+    width: 60%;
 }
 
 .mastardy-picker-button {
+    padding: 0;
+    margin: 0;
     font-size: 300%;
     -unity-text-align: middle-center;
     -unity-font-style: bold;
     background-color: rgba(0, 0, 0, 0);
     border-color: rgba(0, 0, 0, 0);
     color: rgb(255, 200, 0);
+    width: 20%;
 }
 
 .creditsLabel {
