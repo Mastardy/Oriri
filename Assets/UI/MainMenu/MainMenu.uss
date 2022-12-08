@@ -14,7 +14,8 @@
     margin-bottom: 4%;
     background-color: rgb(0, 0, 20);
     border-radius: 17px;
-    width: 30%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .hidden {
@@ -26,17 +27,31 @@
     justify-content: center;
     background-color: rgb(0, 0, 20);
     border-radius: 65px;
-    width: 18%;
-    height: 11%;
+    width: 24%;
+    height: 12%;
     margin-bottom: 1%;
 }
 
+.backBackground {
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 20);
+    border-radius: 65px;
+    width: 15%;
+    height: 12%;
+    margin-top: 1%;
+}
+
+.backButton {
+
+}
+
 .button {
-    font-size: 350%;
+    font-size: 300%;
     -unity-font: url("project://database/Assets/UI/Fonts/Inter-Black.ttf?fileID=12800000&guid=9f268d4c8b46708468c7a831e39c8e7e&type=3#Inter-Black");
     -unity-font-definition: none;
     -unity-text-align: middle-center;
-    width: 92%;
+    width: 94%;
     height: 80%;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 20);
@@ -48,21 +63,14 @@
 
 .button:focus {
     border-color: rgb(255, 216, 80);
-    background-color: rgb(26, 26, 38);
+    background-color: rgb(30, 30, 50);
     transition-duration: 0.1s;
     transition-property: all;
     transition-timing-function: ease-in;
 }
 
 .button:active {
-    background-color: rgb(78, 78, 90);
-}
-
-.yellowMarker {
-    width: 2.25%;
-    height: 4%;
-    background-color: rgb(255, 200, 0);
-    border-radius: 50px;
+    background-color: rgb(60, 60, 80);
 }
 
 .creditsLabel {

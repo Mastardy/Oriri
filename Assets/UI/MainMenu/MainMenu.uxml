@@ -2,7 +2,7 @@
     <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=0e60d80067457e1419877ecf6887e04c&amp;type=3#MainMenu" />
     <Menu name="main" first-focus="playButton" class="root">
         <ui:Label text="ORIRI" enable-rich-text="false" class="title" />
-        <ui:VisualElement class="yellowMarker" />
+        <ui:VisualElement name="yellowMarker" class="yellowMarker" />
         <ui:VisualElement class="buttonBackground">
             <ui:Button text="PLAY" name="playButton" class="button" />
         </ui:VisualElement>
@@ -21,7 +21,7 @@
     
     <Menu name="play" first-focus="back" class="root hidden">
         <ui:Label text="PLAY" class="title" />
-        <ui:VisualElement class="buttonBackground">
+        <ui:VisualElement class="backBackground">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>
     </Menu>
@@ -39,7 +39,7 @@
         <ui:VisualElement class="buttonBackground">
             <ui:Button text="ACCESSIBILITY" name="accessibilityButton" class="button" />
         </ui:VisualElement>
-        <ui:VisualElement class="buttonBackground">
+        <ui:VisualElement class="backBackground">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>
     </Menu>
@@ -48,7 +48,7 @@
     
     <Menu name="controlsOptions" first-focus="back" class="root hidden">
         <ui:Label text="CONTROLS" class="title" />
-        <ui:VisualElement class="buttonBackground">
+        <ui:VisualElement class="backBackground">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>
     </Menu>
@@ -57,7 +57,7 @@
     
     <Menu name="graphicsOptions" first-focus="back" class="root hidden">
         <ui:Label text="GRAPHICS" class="title" />
-        <ui:VisualElement class="buttonBackground">
+        <ui:VisualElement class="backBackground">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>
     </Menu>
@@ -66,7 +66,7 @@
     
     <Menu name="accessibilityOptions" first-focus="back" class="root hidden">
         <ui:Label text="ACCESSIBILITY" class="title" />
-        <ui:VisualElement class="buttonBackground">
+        <ui:VisualElement class="backBackground">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>
     </Menu>
@@ -78,7 +78,7 @@
         <ui:Label text="ANDRÉ MONTEIRO - PROGRAMMER" class="creditsLabel" />
         <ui:Label text="DIOGO BARBOSA - 3D MODELER" class="creditsLabel" />
         <ui:Label text="GONÇALO OLIVEIRA - PROGRAMMER" class="creditsLabel" />
-        <ui:VisualElement class="buttonBackground">
+        <ui:VisualElement class="backBackground">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>
     </Menu>
