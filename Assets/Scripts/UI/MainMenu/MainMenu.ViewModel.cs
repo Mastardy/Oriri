@@ -32,6 +32,12 @@ public partial class MainMenu : MonoBehaviour
         optionsBackButtons.Add(accessibilityOptions.Q<Button>("back"));
 
         resolutionPicker = graphicsOptions.Q<Picker>("resolutionPicker");
+        displayModePicker = graphicsOptions.Q<Picker>("displayModePicker");
+        qualityPicker = graphicsOptions.Q<Picker>("qualityPicker");
+
+        resolutionPicker.onValueChanged += OptionsValueChanged;
+        displayModePicker.onValueChanged += OptionsValueChanged;
+        qualityPicker.onValueChanged += OptionsValueChanged;
 
         play.RegisterCallback<NavigationCancelEvent>(RootMenu);
         options.RegisterCallback<NavigationCancelEvent>(RootMenu);
@@ -90,6 +96,9 @@ public partial class MainMenu : MonoBehaviour
             optionsBackButtons[i].clicked -= OptionsMenu;
         }
         
+        resolutionPicker.onValueChanged -= OptionsValueChanged;
+        displayModePicker.onValueChanged -= OptionsValueChanged;
+
         play.UnregisterCallback<NavigationCancelEvent>(RootMenu);
         options.UnregisterCallback<NavigationCancelEvent>(RootMenu);
         credits.UnregisterCallback<NavigationCancelEvent>(RootMenu);

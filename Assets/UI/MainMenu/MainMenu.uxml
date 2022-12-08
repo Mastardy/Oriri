@@ -3,64 +3,67 @@
     <Menu name="main" first-focus="playButton" class="root">
         <ui:Label text="ORIRI" enable-rich-text="false" class="title" />
         <ui:VisualElement name="yellowMarker" class="yellowMarker" />
-        <ui:VisualElement class="buttonBackground">
+        <ui:VisualElement class="button-background">
             <ui:Button text="PLAY" name="playButton" class="button" />
         </ui:VisualElement>
-        <ui:VisualElement class="buttonBackground">
+        <ui:VisualElement class="button-background">
             <ui:Button text="OPTIONS" name="optionsButton" class="button" />
         </ui:VisualElement>
-        <ui:VisualElement class="buttonBackground">
+        <ui:VisualElement class="button-background">
             <ui:Button text="CREDITS" name="creditsButton" class="button" />
         </ui:VisualElement>
-        <ui:VisualElement class="buttonBackground">
+        <ui:VisualElement class="button-background">
             <ui:Button text="QUIT" name="quitButton" class="button" />
         </ui:VisualElement>
     </Menu>
     <Menu name="play" first-focus="back" class="root hidden">
         <ui:Label text="PLAY" class="title" />
-        <ui:VisualElement class="backBackground">
+        <ui:VisualElement class="back-button-background">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>
     </Menu>
     <Menu name="options" first-focus="controlsButton" class="root hidden">
         <ui:Label text="OPTIONS" class="title" />
-        <ui:VisualElement class="buttonBackground">
+        <ui:VisualElement class="button-background">
             <ui:Button text="CONTROLS" name="controlsButton" class="button" />
         </ui:VisualElement>
-        <ui:VisualElement class="buttonBackground">
+        <ui:VisualElement class="button-background">
             <ui:Button text="GRAPHICS" name="graphicsButton" class="button" />
         </ui:VisualElement>
-        <ui:VisualElement class="buttonBackground">
+        <ui:VisualElement class="button-background">
             <ui:Button text="ACCESSIBILITY" name="accessibilityButton" class="button" />
         </ui:VisualElement>
-        <ui:VisualElement class="backBackground">
+        <ui:VisualElement class="back-button-background">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>
     </Menu>
     <Menu name="controlsOptions" first-focus="back" class="root hidden">
         <ui:Label text="CONTROLS" class="title" />
-        <ui:VisualElement class="backBackground">
+        <ui:VisualElement class="back-button-background">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>
     </Menu>
     <Menu name="graphicsOptions" first-focus="back" class="root hidden">
         <ui:Label text="GRAPHICS" class="title" />
         <ui:VisualElement style="flex-direction: row; width: 45%">
-            <ui:VisualElement style="width: 50%">
-                <ui:Label text="Resolution" class="mastardy-picker-title" />
-                <ui:Label text="" class="mastardy-picker-title" />
+            <ui:VisualElement style="width: 50%; align-content: center;">
+                <ui:Label text="Resolution" class="options-title" />
+                <ui:Label text="Display Mode" class="options-title" />
+                <ui:Label text="Quality" class="options-title"/>
             </ui:VisualElement>
-            <ui:VisualElement style="width: 50%">
+            <ui:VisualElement style="width: 50%; align-content: center;">
                 <Picker name="resolutionPicker" />
+                <Picker name="displayModePicker" />
+                <Picker name="qualityPicker" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement class="backBackground">
+        <ui:VisualElement class="back-button-background">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>
     </Menu>
     <Menu name="accessibilityOptions" first-focus="back" class="root hidden">
         <ui:Label text="ACCESSIBILITY" class="title" />
-        <ui:VisualElement class="backBackground">
+        <ui:VisualElement class="back-button-background">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>
     </Menu>
@@ -69,7 +72,7 @@
         <ui:Label text="ANDRÉ MONTEIRO - PROGRAMMER" class="creditsLabel" />
         <ui:Label text="DIOGO BARBOSA - 3D MODELER" class="creditsLabel" />
         <ui:Label text="GONÇALO OLIVEIRA - PROGRAMMER" class="creditsLabel" />
-        <ui:VisualElement class="backBackground">
+        <ui:VisualElement class="back-button-background">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>
     </Menu>

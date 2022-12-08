@@ -44,7 +44,26 @@ public partial class MainMenu
         
         resolutionPicker.Choices = resolutions;
         resolutionPicker.Index = resolutionIndex;
-        
+
+        displayModePicker.Choices = new List<string>()
+        {
+            "Windowed",
+            "Borderless",
+            "Fullscreen"
+        };
+        displayModePicker.Index = 2;
+
+        qualityPicker.Choices = new List<string>()
+        {
+            "Low",
+            "Medium",
+            "High"
+        };
+        qualityPicker.Index = 2;
+    }
+
+    private void OptionsValueChanged(Picker.ValueChangedEvent evt)
+    {
         
     }
     

@@ -14,6 +14,8 @@ public partial class MainMenu
     private Menu graphicsOptions;
 
     private Picker resolutionPicker;
+    private Picker displayModePicker;
+    private Picker qualityPicker;
     
     private Menu accessibilityOptions;
     

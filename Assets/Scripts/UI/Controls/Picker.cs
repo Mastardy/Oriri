@@ -1,9 +1,24 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine.UIElements;
 using UnityEngine;
 
 public class Picker : VisualElement
 {
+    public struct ValueChangedEvent
+    {
+        public ValueChangedEvent(Picker picker, int oldValue, int newValue)
+        {
+            this.picker = picker;
+            this.oldValue = oldValue;
+            this.newValue = newValue;
+        }
+    
+        public Picker picker;
+        public int oldValue;
+        public int newValue;
+    }
+    
     private List<string> choices;
     public List<string> Choices
     {
@@ -15,8 +30,8 @@ public class Picker : VisualElement
         }
     }
 
-    private DropdownField asdf;
-
+    public event Action<ValueChangedEvent> onValueChanged;
+    
     private int index;
     public int Index
     {
@@ -25,8 +40,10 @@ public class Picker : VisualElement
         {
             if (value < 0) value = choices.Count - 1;
             if (value > choices.Count - 1) value = 0;
+            if (index == value) return;
+            onValueChanged?.Invoke(new ValueChangedEvent(this, index, value));
             index = value;
-            centerLabel.text = choices[index];
+            CenterLabel.text = choices[index];
         }
     }
 
@@ -35,41 +52,41 @@ public class Picker : VisualElement
     private static readonly string labelUssClassName = ussClassName + "-label";
     private static readonly string buttonUssClassName = ussClassName + "-button";
     
-    public Button leftButton { get; }
-    public Label centerLabel { get; }
-    public Button rightButton { get; }
+    public Button LeftButton { get; }
+    public Label CenterLabel { get; }
+    public Button RightButton { get; }
 
     public Picker()
     {
         AddToClassList(ussClassName);
         focusable = true;
 
-        leftButton = new Button()
+        LeftButton = new Button()
         {
             name = "leftButton",
             focusable = false,
             text = "<"
         };
-        leftButton.AddToClassList(buttonUssClassName);
-        leftButton.RegisterCallback<ClickEvent>(PreviousValue);
-        Add(leftButton);
+        LeftButton.AddToClassList(buttonUssClassName);
+        LeftButton.RegisterCallback<ClickEvent>(PreviousValue);
+        Add(LeftButton);
 
-        centerLabel = new Label()
+        CenterLabel = new Label()
         {
             name = "label"
         };
-        centerLabel.AddToClassList(labelUssClassName);
-        Add(centerLabel);
+        CenterLabel.AddToClassList(labelUssClassName);
+        Add(CenterLabel);
         
-        rightButton = new Button()
+        RightButton = new Button()
         {
             name = "rightButton",
             focusable = false,
             text = ">"
         };
-        rightButton.AddToClassList(buttonUssClassName);
-        rightButton.RegisterCallback<ClickEvent>(NextValue);
-        Add(rightButton);
+        RightButton.AddToClassList(buttonUssClassName);
+        RightButton.RegisterCallback<ClickEvent>(NextValue);
+        Add(RightButton);
         
         RegisterCallback<NavigationMoveEvent>(OnNavigationMove);
     }
