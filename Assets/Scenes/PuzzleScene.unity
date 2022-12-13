@@ -308,7 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 7
   height: 5
-  prompts: 3
+  promptAmount: 3
   depth: 6
 --- !u!114 &1069814514
 MonoBehaviour:
