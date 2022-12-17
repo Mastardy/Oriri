@@ -129,9 +129,9 @@ GameObject:
   - component: {fileID: 3790514916748830139}
   - component: {fileID: 3754096347232944348}
   - component: {fileID: 4429973096614332646}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -473,9 +473,9 @@ GameObject:
   - component: {fileID: 864493797586129904}
   - component: {fileID: 3364688058670202637}
   - component: {fileID: 1505289003027084512}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -817,9 +817,9 @@ GameObject:
   - component: {fileID: 7789959401100838875}
   - component: {fileID: 1244010607234731666}
   - component: {fileID: 5967755389800449590}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1193,9 +1193,9 @@ GameObject:
   - component: {fileID: 6843699244689010922}
   - component: {fileID: 3529769164531681768}
   - component: {fileID: 1459893236456041515}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1537,9 +1537,9 @@ GameObject:
   - component: {fileID: 211782634105846781}
   - component: {fileID: 4558740820787082301}
   - component: {fileID: 1107590632005044106}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left Door
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2394,9 +2394,9 @@ GameObject:
   - component: {fileID: 7443185606580534433}
   - component: {fileID: 5208143807269975676}
   - component: {fileID: 6378247941160109168}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Down Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2738,9 +2738,9 @@ GameObject:
   - component: {fileID: 3117270157806233500}
   - component: {fileID: 6714847242045480381}
   - component: {fileID: 6520080470670294512}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3082,9 +3082,9 @@ GameObject:
   - component: {fileID: 6909195269975601931}
   - component: {fileID: 935880216739321506}
   - component: {fileID: 8294888006217909746}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3426,9 +3426,9 @@ GameObject:
   - component: {fileID: 6544524803073292225}
   - component: {fileID: 5184593237927989991}
   - component: {fileID: 7429957476118914408}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Up Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3827,9 +3827,9 @@ GameObject:
   - component: {fileID: 4813072359882675121}
   - component: {fileID: 3938976398841954301}
   - component: {fileID: 6841897808909799162}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Up Door
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4684,9 +4684,9 @@ GameObject:
   - component: {fileID: 3192748106229657728}
   - component: {fileID: 6369957884186299404}
   - component: {fileID: 7084607894266032930}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Down Door
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5544,9 +5544,9 @@ GameObject:
   - component: {fileID: 1124702915909196772}
   - component: {fileID: 7537157920051306916}
   - component: {fileID: 764869636228592749}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5888,7 +5888,7 @@ GameObject:
   - component: {fileID: 2033674397731956225}
   - component: {fileID: 1890517296081383187}
   - component: {fileID: 3946458367079130254}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -6232,9 +6232,9 @@ GameObject:
   - component: {fileID: 5455720219552328540}
   - component: {fileID: 7907534561184100138}
   - component: {fileID: 7434426025097472870}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right Door
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7124,9 +7124,9 @@ GameObject:
   - component: {fileID: 4281105012137125012}
   - component: {fileID: 8295606225365118240}
   - component: {fileID: 334420911661443400}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

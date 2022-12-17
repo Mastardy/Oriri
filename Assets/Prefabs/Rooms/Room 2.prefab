@@ -161,9 +161,9 @@ GameObject:
   - component: {fileID: 1664905801933606237}
   - component: {fileID: 6394940688168885957}
   - component: {fileID: 5610652377441657311}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -562,9 +562,9 @@ GameObject:
   - component: {fileID: 2127447387032071344}
   - component: {fileID: 3486890828826612040}
   - component: {fileID: 3052332818738163153}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right Door
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1419,9 +1419,9 @@ GameObject:
   - component: {fileID: 9025271960461656294}
   - component: {fileID: 2112285993367260810}
   - component: {fileID: 1631612406296305556}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Up Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1763,9 +1763,9 @@ GameObject:
   - component: {fileID: 2859416004090633190}
   - component: {fileID: 4837216644643989834}
   - component: {fileID: 1125176714461837564}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Down Door
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2620,9 +2620,9 @@ GameObject:
   - component: {fileID: 6794815094120735275}
   - component: {fileID: 6166749957427842202}
   - component: {fileID: 7607926386990672286}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Up Door
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3477,9 +3477,9 @@ GameObject:
   - component: {fileID: 3183841129590927401}
   - component: {fileID: 7459186053834151693}
   - component: {fileID: 6528339822978841592}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Down Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3821,7 +3821,7 @@ GameObject:
   - component: {fileID: 8160590372392754741}
   - component: {fileID: 2444579631405306862}
   - component: {fileID: 8884654996834568975}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -4236,9 +4236,9 @@ GameObject:
   - component: {fileID: 4969890911265080278}
   - component: {fileID: 5297286049454077438}
   - component: {fileID: 244487295761354543}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4580,9 +4580,9 @@ GameObject:
   - component: {fileID: 5998079051480063322}
   - component: {fileID: 498862359716653575}
   - component: {fileID: 8508552362952766558}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left Door
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5329,25 +5329,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 0}
   m_VersionIndex: 1246
   m_IsSelectable: 1
-  m_SelectedFaces: 0600000007000000
-  m_SelectedEdges:
-  - a: 24
-    b: 25
-  - a: 25
-    b: 26
-  - a: 27
-    b: 24
-  - a: 26
-    b: 27
-  - a: 31
-    b: 28
-  - a: 28
-    b: 29
-  - a: 30
-    b: 31
-  - a: 29
-    b: 30
-  m_SelectedVertices: 18000000190000001a0000001b0000001f0000001c0000001d0000001e000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &8878961305913114561
 MonoBehaviour:
   m_ObjectHideFlags: 0
