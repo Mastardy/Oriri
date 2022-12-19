@@ -2,7 +2,6 @@
     <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=0e60d80067457e1419877ecf6887e04c&amp;type=3#MainMenu" />
     <Menu name="main" first-focus="playButton" class="root">
         <ui:Label text="ORIRI" enable-rich-text="false" class="title" />
-        <ui:VisualElement name="yellowMarker" class="yellowMarker" />
         <ui:VisualElement class="button-background">
             <ui:Button text="PLAY" name="playButton" class="button" />
         </ui:VisualElement>
@@ -45,11 +44,11 @@
     </Menu>
     <Menu name="graphicsOptions" first-focus="back" class="root hidden">
         <ui:Label text="GRAPHICS" class="title" />
-        <ui:VisualElement style="flex-direction: row; width: 45%">
+        <ui:VisualElement style="flex-direction: row; width: 45%;">
             <ui:VisualElement style="width: 50%; align-content: center;">
                 <ui:Label text="Resolution" class="options-title" />
                 <ui:Label text="Display Mode" class="options-title" />
-                <ui:Label text="Quality" class="options-title"/>
+                <ui:Label text="Quality" class="options-title" />
             </ui:VisualElement>
             <ui:VisualElement style="width: 50%; align-content: center;">
                 <Picker name="resolutionPicker" />
