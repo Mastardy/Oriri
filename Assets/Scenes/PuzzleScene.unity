@@ -306,10 +306,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bff71c4476fdb74a91711b26668b26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 7
+  width: 5
   height: 5
-  promptAmount: 3
-  depth: 6
+  promptAmount: 2
+  depth: 5
 --- !u!114 &1069814514
 MonoBehaviour:
   m_ObjectHideFlags: 0

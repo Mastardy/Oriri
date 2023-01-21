@@ -15,17 +15,20 @@
             <ui:Button text="QUIT" name="quitButton" class="button" />
         </ui:VisualElement>
     </Menu>
-    <Menu name="play" first-focus="back" class="root hidden">
+    <Menu name="play" first-focus="tutorialButton" class="root hidden">
         <ui:Label text="PLAY" class="title" />
+        <ui:VisualElement class="button-background">
+            <ui:Button text="Tutorial" name="tutorialButton" class="button" />
+        </ui:VisualElement>
+        <ui:VisualElement class="button-background">
+            <ui:Button text="New Game" name="newGameButton" class="button" />
+        </ui:VisualElement>
         <ui:VisualElement class="back-button-background">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>
     </Menu>
-    <Menu name="options" first-focus="controlsButton" class="root hidden">
+    <Menu name="options" first-focus="graphicsButton" class="root hidden">
         <ui:Label text="OPTIONS" class="title" />
-        <ui:VisualElement class="button-background">
-            <ui:Button text="CONTROLS" name="controlsButton" class="button" />
-        </ui:VisualElement>
         <ui:VisualElement class="button-background">
             <ui:Button text="GRAPHICS" name="graphicsButton" class="button" />
         </ui:VisualElement>
@@ -36,13 +39,7 @@
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>
     </Menu>
-    <Menu name="controlsOptions" first-focus="back" class="root hidden">
-        <ui:Label text="CONTROLS" class="title" />
-        <ui:VisualElement class="back-button-background">
-            <ui:Button text="BACK" name="back" class="button" />
-        </ui:VisualElement>
-    </Menu>
-    <Menu name="graphicsOptions" first-focus="back" class="root hidden">
+    <Menu name="graphicsOptions" first-focus="resolutionPicker" class="root hidden">
         <ui:Label text="GRAPHICS" class="title" />
         <ui:VisualElement style="flex-direction: row; width: 45%;">
             <ui:VisualElement style="width: 50%; align-content: center;">

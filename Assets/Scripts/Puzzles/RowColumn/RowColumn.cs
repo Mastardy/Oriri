@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Random = UnityEngine.Random;
 
 public class RowColumn : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class RowColumn : MonoBehaviour
     [SerializeField] private int promptAmount;
     [SerializeField] private int depth;
 
+    public event Action GameCompleted;
+    
     private int currentX;
     private int CurrentX
     {
@@ -30,17 +34,24 @@ public class RowColumn : MonoBehaviour
     private int[,] boardNumbers;
     
     private bool columnSelection = true;
+
+    public bool beingPlayed;
     
     private void Start()
     {
         root = GetComponent<UIDocument>().rootVisualElement;
         root = root.Q<VisualElement>("root");
         root.style.flexDirection = FlexDirection.ColumnReverse;
-        
+    }
+
+    public void GenerateGame()
+    {
+        if (beingPlayed) return;
+        beingPlayed = true;
         GenerateBoard();
         GeneratePrompts();
     }
-
+    
     private void GenerateBoard()
     {
         boardGrid = new RowColumnGrid(width, height);
@@ -202,12 +213,23 @@ public class RowColumn : MonoBehaviour
                 {
                     if (!prompts[j].finished) finished = false;
                 }
-                if (finished) Debug.Log("Completou tudo");
+
+                if (finished)
+                {
+                    FinishGame();
+                }
             }
             else
             {
                 prompts[i].index = 0;
             }
         }
+    }
+    
+    private void FinishGame()
+    {
+        GameCompleted?.Invoke();
+        root.Clear();
+        beingPlayed = false;
     }
 }
