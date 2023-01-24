@@ -504,22 +504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c87f2a9da652d1468fa8a16a02323ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTransform: {fileID: 0}
-  cameraTransform: {fileID: 1763798459}
-  cameraPivotTransform: {fileID: 607769275}
-  myTransform: {fileID: 0}
-  cameraTransformPosition: {x: 0, y: 0, z: 0}
-  ignoreLayers:
-    m_Bits: 0
-  cameraFollowVelocity: {x: 0, y: 0, z: 0}
-  lookSpeed: 0.1
-  followSpeed: 0.1
-  pivotSpeed: 0.03
-  defaultPosition: 0
-  lookAngle: 0
-  pivotAngle: 0
-  minimumPivot: -35
-  maximumPivot: 35
 --- !u!4 &780948251
 Transform:
   m_ObjectHideFlags: 0
@@ -956,10 +940,9 @@ MonoBehaviour:
   size: {x: 10, y: 10}
   startPos: 0
   rooms:
-  - {fileID: 4371293259800868010, guid: 82c41e7a6bce9ee4091cc87cedf8f8b4, type: 3}
   - {fileID: 4371293259800868010, guid: a6c46e019e9c3df4ebf9b664ef931852, type: 3}
-  - {fileID: 4371293259800868010, guid: 8438f1c5be8a0c841b448e11f63babc5, type: 3}
-  offset: {x: 40, y: 40}
+  - {fileID: 4371293259800868010, guid: 037bd4d9608ec4c4fb058b5e8ac36ecb, type: 3}
+  offset: {x: 102.5, y: 97.5}
 --- !u!4 &1132023129
 Transform:
   m_ObjectHideFlags: 0
@@ -1171,8 +1154,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651559549}
-  m_LocalRotation: {x: -0.18174496, y: -0.00000002392824, z: -0.0000000044224913,
-    w: 0.98334575}
+  m_LocalRotation: {x: -0.18174496, y: 0.000000023928244, z: 0.0000000044224913, w: 0.98334575}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
