@@ -34,6 +34,7 @@ public partial class MainMenu : MonoBehaviour
         resolutionPicker = graphicsOptions.Q<Picker>("resolutionPicker");
         displayModePicker = graphicsOptions.Q<Picker>("displayModePicker");
         qualityPicker = graphicsOptions.Q<Picker>("qualityPicker");
+        colorBlindPicker = accessibilityOptions.Q<Picker>("colorBlindPicker");
         
         backButtons.Add(play.Q<Button>("back"));
         backButtons.Add(options.Q<Button>("back"));
@@ -52,6 +53,7 @@ public partial class MainMenu : MonoBehaviour
         resolutionPicker.onValueChanged += OptionsValueChanged;
         displayModePicker.onValueChanged += OptionsValueChanged;
         qualityPicker.onValueChanged += OptionsValueChanged;
+        colorBlindPicker.onValueChanged += OptionsValueChanged;
         
         for (int i = 0; i < backButtons.Count; i++)
         {
@@ -120,6 +122,7 @@ public partial class MainMenu : MonoBehaviour
         resolutionPicker.onValueChanged -= OptionsValueChanged;
         displayModePicker.onValueChanged -= OptionsValueChanged;
         qualityPicker.onValueChanged -= OptionsValueChanged;
+        colorBlindPicker.onValueChanged -= OptionsValueChanged;
         
         play.UnregisterCallback<NavigationCancelEvent>(RootMenu);
         options.UnregisterCallback<NavigationCancelEvent>(RootMenu);

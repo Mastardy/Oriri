@@ -7,6 +7,7 @@ public class Options
     public int quality = -1;
     
     // Accessibility
+    public int colorBlindness = -1;
 
     public void Load()
     {
@@ -14,6 +15,7 @@ public class Options
         resolution = temp.resolution;
         displayMode = temp.displayMode;
         quality = temp.quality;
+        colorBlindness = temp.colorBlindness;
     }
     
     public void Save()

@@ -59,6 +59,14 @@
     </Menu>
     <Menu name="accessibilityOptions" first-focus="back" class="root hidden">
         <ui:Label text="ACCESSIBILITY" class="title" />
+        <ui:VisualElement style="flex-direction: row; width: 45%;">
+            <ui:VisualElement style="width: 50%; align-content: center;">
+                <ui:Label text="Color Blind" class="options-title" />
+            </ui:VisualElement>
+            <ui:VisualElement style="width: 50%; align-content: center;">
+                <Picker name="colorBlindPicker" />
+            </ui:VisualElement>
+        </ui:VisualElement>
         <ui:VisualElement class="back-button-background">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>

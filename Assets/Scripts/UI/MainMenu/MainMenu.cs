@@ -30,6 +30,8 @@ public partial class MainMenu
     private Picker resolutionPicker;
     private Picker displayModePicker;
     private Picker qualityPicker;
+
+    private Picker colorBlindPicker;
  
     private List<Button> backButtons = new();
     private List<Button> optionsBackButtons = new();

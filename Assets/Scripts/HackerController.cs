@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -33,6 +32,7 @@ public class HackerController : MonoBehaviour
     {
         if (movePlatform.IsPressed())
         {
+            if (closestPlatform == null) return;
             energy -= closestPlatform.Move();
         }
     }
@@ -40,7 +40,7 @@ public class HackerController : MonoBehaviour
     private void FixedUpdate()
     {
         Collider[] results = new Collider[256];
-        var size = Physics.OverlapSphereNonAlloc(player.transform.position, 10, results, Physics.AllLayers);
+        var size = Physics.OverlapSphereNonAlloc(player.transform.position, 15, results, Physics.AllLayers);
 
         var platforms = new List<Platform>();
         var robots = new List<Robot>();
