@@ -1,0 +1,69 @@
+#root {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 25%;
+    height: 35%;
+    flex-grow: 1;
+    right: 0; bottom: 0;
+}
+
+RowColumnGrid {
+    width: 100%;
+    height: 75%;
+}
+
+RowColumnPrompt {
+    justify-content: center;
+    width: 30%;
+    padding-bottom: 1%;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.expand {
+    flex-grow: 1;
+}
+
+.borderless {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-label {
+    color: #BBBBBB;
+    background-color: rgb(30, 30, 30);
+    border-color: #999999;
+    border-radius: 0;
+    border-width: 1px;
+    font-size: 200%;
+    -unity-text-align: middle-center;
+    -unity-font: url('project://database/Assets/UI/Fonts/ShareTechMono-Regular.ttf?fileID=12800000&guid=7f2b987e848f6a74eacfe74e48d886b8&type=3#ShareTechMono-Regular');
+    -unity-font-definition: none;
+}
+
+.label-selected
+{
+    background-color: rgb(90, 90, 90);
+}
+
+.label-current
+{
+    background-color: rgb(60, 60, 60);
+}
+
+.label-next
+{
+    background-color: rgb(40, 40, 40);
+}
+
+.prompt-label {
+    color: #BBBBBB;
+    padding: 2px;
+    font-size: 300%;
+    -unity-text-align: middle-center;
+    -unity-font: url('project://database/Assets/UI/Fonts/ShareTechMono-Regular.ttf?fileID=12800000&guid=7f2b987e848f6a74eacfe74e48d886b8&type=3#ShareTechMono-Regular');
+    -unity-font-definition: none;
+}

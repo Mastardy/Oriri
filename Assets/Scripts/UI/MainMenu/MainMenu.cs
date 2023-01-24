@@ -10,28 +10,29 @@ public partial class MainMenu
     private Menu play;
     
     private Menu options;
-    private Menu controlsOptions;
     private Menu graphicsOptions;
-
-    private Picker resolutionPicker;
-    private Picker displayModePicker;
-    private Picker qualityPicker;
-    
     private Menu accessibilityOptions;
     
     private Menu credits;
-
+    
     private Button playButton;
+    private Button tutorialButton;
+    private Button newGameButton;
     
     private Button optionsButton;
-    private Button controlsButton;
     private Button graphicsButton;
     private Button accessibilityButton;
     
     private Button creditsButton;
     
     private Button quitButton;
+    
+    private Picker resolutionPicker;
+    private Picker displayModePicker;
+    private Picker qualityPicker;
 
+    private Picker colorBlindPicker;
+ 
     private List<Button> backButtons = new();
     private List<Button> optionsBackButtons = new();
 }
