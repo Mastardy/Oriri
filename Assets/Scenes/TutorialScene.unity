@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18231997, g: 0.22490983, b: 0.28921723, a: 1}
+  m_IndirectSpecularColor: {r: 0.18232094, g: 0.22491023, b: 0.2892176, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!23 &188595434 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9c30d64b61c659241971d64bda210ae5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1475217563}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &321360538
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +167,8 @@ PlayableDirector:
     value: {fileID: 1578311823}
   - key: {fileID: 7849531316896383411, guid: cb4c453cb61210b4b9a09e95d96a5a35, type: 2}
     value: {fileID: 1578311823}
+  - key: {fileID: 3375689449219276222, guid: cb4c453cb61210b4b9a09e95d96a5a35, type: 2}
+    value: {fileID: 857628733}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &321360540
@@ -383,6 +391,7 @@ GameObject:
   - component: {fileID: 857628731}
   - component: {fileID: 857628732}
   - component: {fileID: 857628733}
+  - component: {fileID: 857628734}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -421,7 +430,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -522,8 +531,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Events:
-    m_Signals: []
-    m_Events: []
+    m_Signals:
+    - {fileID: 11400000, guid: 1aef496e146ff5c429633a7341ac7058, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 857628734}
+          m_TargetAssemblyTypeName: UnityEngine.Video.VideoPlayer, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!328 &857628734
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857628727}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 34a005227eb534c4db56bde33db58712, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 857628729}
+  m_TargetTexture: {fileID: 8400000, guid: 6cd3b0a24a50d2943949bb879a18c20d, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 188595434}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 2
+  m_AspectRatio: 0
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 0
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &891460168
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,6 +748,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.004402361, y: 0.004360552, z: 0.0038048795}
   m_Center: {x: -0.00025208952, y: 0.00011623616, z: -0.000024533314}
+--- !u!1001 &1475217563
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 9c30d64b61c659241971d64bda210ae5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9c30d64b61c659241971d64bda210ae5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.9740938
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9c30d64b61c659241971d64bda210ae5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.2089183
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9c30d64b61c659241971d64bda210ae5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.70218587
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9c30d64b61c659241971d64bda210ae5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0000001376788
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9c30d64b61c659241971d64bda210ae5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000013767875
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9c30d64b61c659241971d64bda210ae5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9c30d64b61c659241971d64bda210ae5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9c30d64b61c659241971d64bda210ae5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9c30d64b61c659241971d64bda210ae5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9c30d64b61c659241971d64bda210ae5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9c30d64b61c659241971d64bda210ae5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a433025244ae9949b2d19f16d2d7b25, type: 2}
+    - target: {fileID: 919132149155446097, guid: 9c30d64b61c659241971d64bda210ae5,
+        type: 3}
+      propertyPath: m_Name
+      value: screen
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c30d64b61c659241971d64bda210ae5, type: 3}
 --- !u!1001 &1578311820
 PrefabInstance:
   m_ObjectHideFlags: 0
