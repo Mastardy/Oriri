@@ -169,6 +169,8 @@ PlayableDirector:
     value: {fileID: 1578311823}
   - key: {fileID: 3375689449219276222, guid: cb4c453cb61210b4b9a09e95d96a5a35, type: 2}
     value: {fileID: 857628733}
+  - key: {fileID: 1276058401940873335, guid: cb4c453cb61210b4b9a09e95d96a5a35, type: 2}
+    value: {fileID: 891460172}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &321360540
@@ -392,6 +394,7 @@ GameObject:
   - component: {fileID: 857628732}
   - component: {fileID: 857628733}
   - component: {fileID: 857628734}
+  - component: {fileID: 857628735}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -533,10 +536,37 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 1aef496e146ff5c429633a7341ac7058, type: 2}
+    - {fileID: 11400000, guid: bf6c38734469c764c9b90d28f3c230a2, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 857628734}
+          m_TargetAssemblyTypeName: UnityEngine.Video.VideoPlayer, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 857628734}
+          m_TargetAssemblyTypeName: UnityEngine.Video.VideoPlayer, UnityEngine
+          m_MethodName: Stop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 857628735}
           m_TargetAssemblyTypeName: UnityEngine.Video.VideoPlayer, UnityEngine
           m_MethodName: Play
           m_Mode: 1
@@ -556,7 +586,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857628727}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 34a005227eb534c4db56bde33db58712, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 672dbce6308235d4cba5b5ffebd58d03, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 857628729}
@@ -569,6 +599,41 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 0
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!328 &857628735
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857628727}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: b8b2c8812c9f1c9429f1958a48b2b113, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 857628729}
+  m_TargetTexture: {fileID: 8400000, guid: 6cd3b0a24a50d2943949bb879a18c20d, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 0
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
@@ -594,6 +659,7 @@ GameObject:
   - component: {fileID: 891460171}
   - component: {fileID: 891460170}
   - component: {fileID: 891460169}
+  - component: {fileID: 891460172}
   m_Layer: 0
   m_Name: Global Volume
   m_TagString: Untagged
@@ -645,6 +711,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &891460172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891460168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 2f0f33abd9b4a2640ae7fff3539c09c5, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 891460169}
+          m_TargetAssemblyTypeName: TutorialAmbience, Assembly-CSharp
+          m_MethodName: RemoveLensDistortion
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &911699165
 PrefabInstance:
   m_ObjectHideFlags: 0
