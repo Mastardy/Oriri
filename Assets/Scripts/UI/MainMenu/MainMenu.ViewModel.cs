@@ -66,6 +66,11 @@ public partial class MainMenu : MonoBehaviour
             optionsBackButtons[i].clicked += OptionsMenu;
             optionsBackButtons[i].RegisterCallback<MouseEnterEvent>(FocusOnHover);
         }
+        
+        resolutionPicker.RegisterCallback<MouseEnterEvent>(FocusOnHover);
+        displayModePicker.RegisterCallback<MouseEnterEvent>(FocusOnHover);
+        qualityPicker.RegisterCallback<MouseEnterEvent>(FocusOnHover);
+        colorBlindPicker.RegisterCallback<MouseEnterEvent>(FocusOnHover);
 
         playButton.clicked += PlayMenu;
         playButton.RegisterCallback<MouseEnterEvent>(FocusOnHover);
@@ -89,7 +94,12 @@ public partial class MainMenu : MonoBehaviour
     }
 
     private void OnDisable()
-    {
+    {   
+        resolutionPicker.UnregisterCallback<MouseEnterEvent>(FocusOnHover);
+        displayModePicker.UnregisterCallback<MouseEnterEvent>(FocusOnHover);
+        qualityPicker.UnregisterCallback<MouseEnterEvent>(FocusOnHover);
+        colorBlindPicker.UnregisterCallback<MouseEnterEvent>(FocusOnHover);
+        
         playButton.clicked -= PlayMenu;
         playButton.UnregisterCallback<MouseEnterEvent>(FocusOnHover);
         tutorialButton.clicked -= Tutorial;
