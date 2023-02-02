@@ -21,6 +21,7 @@ public class Robot : MonoBehaviour
 
     private void Awake()
     {
+        player = GameObject.Find("Player");
         animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
 
@@ -34,14 +35,14 @@ public class Robot : MonoBehaviour
 
     private void Update()
     {
-        if(Vector3.Distance(player.transform.position, transform.position) < 5) navMeshAgent.SetDestination(player.transform.position);
+        if(Vector3.Distance(player.transform.position, transform.position) < 15) navMeshAgent.SetDestination(player.transform.position);
         else navMeshAgent.ResetPath();
         animator.SetFloat(velocityFloat, navMeshAgent.velocity.magnitude);   
     }
 
     private void LateUpdate()
     {
-        if (Vector3.Distance(player.transform.position, transform.position) < 5) transform.rotation = Quaternion.LookRotation(navMeshAgent.velocity.normalized);
+        if (Vector3.Distance(player.transform.position, transform.position) < 15) transform.rotation = Quaternion.LookRotation(navMeshAgent.velocity.normalized);
     }
 
     private void KillInput(InputAction.CallbackContext context)
