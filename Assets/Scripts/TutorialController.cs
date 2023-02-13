@@ -13,6 +13,8 @@ public class TutorialController : MonoBehaviour
     [SerializeField] private float gravity = 5f;
     [SerializeField] private float jumpSpeed = 50f;
     private float verticalSpeed = 0;
+
+    [SerializeField] private Transform cameraTransform;
     
     private static readonly int velocityCache = Animator.StringToHash("velocity");
 
@@ -30,7 +32,7 @@ public class TutorialController : MonoBehaviour
         var movement = prisonerMovement.ReadValue<Vector2>();
         if(movement.magnitude > 1) movement.Normalize();
 
-        Vector3 velocity = Vector3.forward * movement.x + Vector3.left * movement.y;
+        Vector3 velocity = cameraTransform.forward * movement.y + cameraTransform.right * movement.x;
         velocity *= Time.deltaTime * moveSpeed;
 
         verticalSpeed -= gravity * Time.deltaTime;
@@ -40,7 +42,7 @@ public class TutorialController : MonoBehaviour
             if (prisonerJump.IsPressed()) verticalSpeed = jumpSpeed;
         }
         
-        velocity.y = verticalSpeed;
+        velocity.y = verticalSpeed * Time.deltaTime;
         
         charController.Move(velocity);
 

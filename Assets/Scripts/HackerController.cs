@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,22 +8,30 @@ public class HackerController : MonoBehaviour
     [SerializeField] private RowColumn rowColumnGame;
     
     [SerializeField] private float maxEnergy = 10;
+    [SerializeField] private RectTransform energyUI;
+    [SerializeField] private TextMeshProUGUI energyUIText;
     private float energy;
 
     [SerializeField] private InputAction restoreEnergy;
-    [SerializeField] private InputAction movePlatform;
+    [SerializeField] private InputAction killRobot;
 
     [SerializeField] private GameObject player;
+
+    [SerializeField] private GameObject hackerCube;
     
     private Platform closestPlatform;
     private Robot closestRobot;
-    
+
+    private bool playing;
+
+    private float lastRobotKill;
+
     private void Awake()
     {
         restoreEnergy.performed += GenerateGame;
 
         restoreEnergy.Enable();
-        movePlatform.Enable();
+        killRobot.Enable();
 
         rowColumnGame.GameCompleted += RestoreEnergy;
         RestoreEnergy();
@@ -30,10 +39,24 @@ public class HackerController : MonoBehaviour
 
     private void Update()
     {
-        if (movePlatform.IsPressed())
+        energyUIText.text = energy + " / " + maxEnergy;
+        energyUI.localScale = new Vector3(energy/maxEnergy, 1, 1);
+        
+        if (!closestRobot)
         {
-            if (closestPlatform == null) return;
-            energy -= closestPlatform.Move();
+            hackerCube.transform.position = new Vector3(3000, -3000, 3000);
+            return;
+        }
+
+        hackerCube.transform.position = closestRobot.transform.position + Vector3.up * 2;
+        
+        if (energy < 1 || playing) return;
+        
+        if (killRobot.WasPressedThisFrame())
+        {
+            lastRobotKill = Time.time;
+            energy -= 1;
+            closestRobot.Kill();
         }
     }
 
@@ -95,11 +118,15 @@ public class HackerController : MonoBehaviour
     
     private void GenerateGame(InputAction.CallbackContext context)
     {
-        if(energy < maxEnergy * 0.75) rowColumnGame.GenerateGame();
+        if (!(energy < maxEnergy * 0.75)) return;
+        
+        rowColumnGame.GenerateGame();
+        playing = true;
     }
     
     private void RestoreEnergy()
     {
         energy = maxEnergy;
+        playing = false;
     }
 }

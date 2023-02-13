@@ -75,7 +75,6 @@
         <ui:Label text="CREDITS" class="title" />
         <ui:Label text="ANDRÉ MONTEIRO - PROGRAMMER" class="creditsLabel" />
         <ui:Label text="DIOGO BARBOSA - 3D MODELER" class="creditsLabel" />
-        <ui:Label text="GONÇALO OLIVEIRA - PROGRAMMER" class="creditsLabel" />
         <ui:VisualElement class="back-button-background">
             <ui:Button text="BACK" name="back" class="button" />
         </ui:VisualElement>

@@ -1,7 +1,5 @@
-using System;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.InputSystem;
 
 public class Robot : MonoBehaviour
 {
@@ -12,13 +10,12 @@ public class Robot : MonoBehaviour
     private NavMeshAgent navMeshAgent; 
     
     public GameObject player;
-    
-    public InputAction velocityInput;
-    public InputAction killInput;
-    
+
     private static readonly int deathTrigger = Animator.StringToHash("Death");
     private static readonly int velocityFloat = Animator.StringToHash("velocity");
 
+    private bool dead;
+    
     private void Awake()
     {
         player = GameObject.Find("Player");
@@ -26,16 +23,12 @@ public class Robot : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
 
         navMeshAgent.updateRotation = false;
-
-        killInput.performed += KillInput;
-        
-        velocityInput.Enable();
-        killInput.Enable();
     }
 
     private void Update()
     {
-        if(Vector3.Distance(player.transform.position, transform.position) < 15) navMeshAgent.SetDestination(player.transform.position);
+        if (dead) return;
+        if(Vector3.Distance(player.transform.position, transform.position) < 10) navMeshAgent.SetDestination(player.transform.position);
         else navMeshAgent.ResetPath();
         animator.SetFloat(velocityFloat, navMeshAgent.velocity.magnitude);   
     }
@@ -45,8 +38,17 @@ public class Robot : MonoBehaviour
         if (Vector3.Distance(player.transform.position, transform.position) < 15) transform.rotation = Quaternion.LookRotation(navMeshAgent.velocity.normalized);
     }
 
-    private void KillInput(InputAction.CallbackContext context)
+    public void Kill()
     {
+        GetComponent<BoxCollider>().enabled = false;
+        navMeshAgent.enabled = false;
         animator.SetTrigger(deathTrigger);
+        dead = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("Player")) return;
+        GameManager.Instance.GameOver();
     }
 }
